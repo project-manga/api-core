@@ -3,9 +3,6 @@ jobs:
   build:
     docker:
       - image: microsoft/dotnet
-    branches:
-      only:
-        - develop
     steps:
       - checkout
       
