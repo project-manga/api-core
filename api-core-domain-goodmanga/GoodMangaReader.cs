@@ -10,7 +10,7 @@
             mClient = client ?? throw new ArgumentNullException(nameof(client));
         }
 
-        public IMangaIdentifier Id => new GoodMangaIdentifier(mContext.Sid);
+        public IMangaIdentifier Id => mContext.Identifier;
 
         public int Chapter => mContext.CurrentChapter;
 
@@ -37,7 +37,7 @@
                 mContext.NextPage();
 
                 mClient.Page(
-                    new GoodMangaIdentifier(mContext.Sid),
+                    mContext.Identifier,
                     mContext.CurrentChapter,
                     mContext.CurrentChapterPart,
                     mContext.CurrentPage);

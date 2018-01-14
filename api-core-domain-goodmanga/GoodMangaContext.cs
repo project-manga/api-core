@@ -16,7 +16,7 @@
         /// <param name="startingPage">Manga starting page</param>
         /// <param name="endingPage">Manga ending page</param>
         public GoodMangaContext(
-            string sid,
+            IMangaIdentifier identifier,
             int startingChapter,
             int? endingChapter,
             int? startingChapterPart,
@@ -25,7 +25,7 @@
             int startingPage,
             int? endingPage)
         {
-            Sid = sid ?? throw new ArgumentNullException(nameof(sid));
+            Identifier = identifier ?? throw new ArgumentNullException(nameof(identifier));
             StartingChapter = startingChapter;
             CurrentChapter = startingChapter;
             EndingChapter = endingChapter;
@@ -38,7 +38,7 @@
             EndingPage = endingPage;
         }
 
-        public string Sid { get; }
+        public IMangaIdentifier Identifier { get; }
 
         public int StartingChapter { get; }
         public int CurrentChapter { get; private set; }

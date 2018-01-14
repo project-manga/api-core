@@ -18,7 +18,7 @@
             while (reader.Read())
             {
                 // TODO: log
-                Console.WriteLine($"{mConnection.Sid}: {reader.Chapter} {reader.Part.GetValueOrDefault()} {reader.Page}");
+                Console.WriteLine($"{mConnection.Id}: {reader.Chapter} {reader.Part.GetValueOrDefault()} {reader.Page}");
             }
         }
     }

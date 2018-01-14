@@ -12,7 +12,7 @@
         public GoodMangaReader ExecuteReader()
         {
             var context = new GoodMangaContext(
-                mConnection.Sid,
+                mConnection.Id,
                 mConnection.StartingChapter,
                 mConnection.EndingChapter,
                 mConnection.StartingChapterPart,

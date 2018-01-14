@@ -2,7 +2,7 @@
 {
     public class GoodMangaConnection
     {
-        public string Sid { get; set; }
+        public IMangaIdentifier Id { get; set; }
         public int StartingChapter { get; set; }
         public int? EndingChapter { get; set; }
         public int? StartingChapterPart { get; set; }

@@ -15,7 +15,7 @@
 
             var cnn = new GoodMangaConnection
             {
-                Sid = sid,
+                Id = new GoodMangaIdentifier(sid),
                 StartingChapter = ch,
                 StartingPage = page
             };
