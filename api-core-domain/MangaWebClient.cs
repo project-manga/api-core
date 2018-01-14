@@ -1,4 +1,4 @@
-﻿namespace ApiCoreDomain.GoodManga
+﻿namespace ApiCoreDomain
 {
     using System;
     using System.Net;
@@ -6,10 +6,10 @@
     /// <summary>
     /// Client to Good Manga site.
     /// </summary>
-    public class GoodMangaClient : IMangaClient
+    public class MangaWebClient : IMangaClient
     {
         #region Constructors
-        public GoodMangaClient(
+        public MangaWebClient(
             IMangaEnvironment environment,
             IUriFormatter uriFormatter)
         {

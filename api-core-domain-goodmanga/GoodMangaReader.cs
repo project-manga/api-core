@@ -4,7 +4,7 @@
 
     public class GoodMangaReader : IMangaReader
     {
-        public GoodMangaReader(GoodMangaContext context, GoodMangaClient client)
+        public GoodMangaReader(GoodMangaContext context, MangaWebClient client)
         {
             mContext = context ?? throw new ArgumentNullException(nameof(context));
             mClient = client ?? throw new ArgumentNullException(nameof(client));
@@ -58,6 +58,6 @@
         }
 
         private readonly GoodMangaContext mContext;
-        private readonly GoodMangaClient mClient;
+        private readonly MangaWebClient mClient;
     }
 }

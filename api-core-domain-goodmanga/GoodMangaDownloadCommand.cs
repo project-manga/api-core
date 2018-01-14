@@ -22,7 +22,7 @@
                 mConnection.EndingPage);
 
             return new GoodMangaReader(context,
-                new GoodMangaClient(
+                new MangaWebClient(
                     new MangaEnvironment(),
                     new GoodMangaUriFormatter()
                 )
