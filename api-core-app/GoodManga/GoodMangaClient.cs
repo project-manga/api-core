@@ -11,7 +11,7 @@
         #region Constructors
         public GoodMangaClient(
             IGoodMangaEnvironment environment,
-            IGoodMangaUriFormatter uriFormatter)
+            IUriFormatter uriFormatter)
         {
             mEnvironment = environment ?? throw new ArgumentNullException(nameof(environment));
             mUriFormatter = uriFormatter ?? throw new ArgumentNullException(nameof(uriFormatter));
@@ -41,7 +41,7 @@
         #region Private
         private WebClient mWebClient;
         private IGoodMangaEnvironment mEnvironment;
-        private IGoodMangaUriFormatter mUriFormatter;
+        private IUriFormatter mUriFormatter;
 
         private static string GetPageDownloadErrorMessage(string sid, int chapter, int? part, int page)
         {

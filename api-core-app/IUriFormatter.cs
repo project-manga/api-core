@@ -1,4 +1,4 @@
-﻿namespace ApiCoreApp.GoodManga
+﻿namespace ApiCoreApp
 {
     /// <summary>
     /// Implemented by those classes whose compose 
