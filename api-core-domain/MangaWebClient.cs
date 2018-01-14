@@ -46,7 +46,7 @@
         private static string GetPageDownloadErrorMessage(string sid, int chapter, int? part, int page)
         {
             var actualPart = part ?? -1;
-            var errorMessage = $"An error occurred while trying to download: {sid}, {chapter}, {part}, {page}";
+            var errorMessage = $"An error occurred while trying to download: {sid}, {chapter}, {actualPart}, {page}";
             return errorMessage;
         } 
         #endregion
