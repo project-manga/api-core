@@ -2,6 +2,6 @@
 {
     public interface IGoodMangaOperationFactory
     {
-        GoodMangaDownloadOperation CreateDownloadOperation(long id);
+        IMangaOperation CreateDownloadOperation(long id);
     }
 }

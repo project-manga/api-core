@@ -11,7 +11,7 @@
 
         public void Download(long id)
         {
-            GoodMangaDownloadOperation downloadOperation = mGoodMangaOperationFactory.CreateDownloadOperation(id);
+            var downloadOperation = mGoodMangaOperationFactory.CreateDownloadOperation(id);
             downloadOperation.Execute();
         }
 

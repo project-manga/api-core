@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class GoodMangaDownloadOperation
+    public class GoodMangaDownloadOperation : IMangaOperation
     {
         private readonly GoodMangaConnection mConnection;
 
