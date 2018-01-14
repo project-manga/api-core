@@ -4,7 +4,7 @@
 
     public class GoodMangaDownloadCommand : DownloadCommand
     {
-        public GoodMangaDownloadCommand(GoodMangaConnection connection)
+        public GoodMangaDownloadCommand(IMangaConnection connection)
         {
             mConnection = connection ?? throw new ArgumentNullException(nameof(connection));
         }
@@ -29,6 +29,6 @@
             );
         }
 
-        private readonly GoodMangaConnection mConnection;
+        private readonly IMangaConnection mConnection;
     }
 }

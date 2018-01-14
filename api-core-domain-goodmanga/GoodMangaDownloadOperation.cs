@@ -4,9 +4,9 @@
 
     public class GoodMangaDownloadOperation : IMangaOperation
     {
-        private readonly GoodMangaConnection mConnection;
+        private readonly IMangaConnection mConnection;
 
-        public GoodMangaDownloadOperation(GoodMangaConnection connection)
+        public GoodMangaDownloadOperation(IMangaConnection connection)
         {
             mConnection = connection ?? throw new ArgumentNullException(nameof(connection));
         }

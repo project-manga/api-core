@@ -2,13 +2,13 @@
 {
     public interface IMangaConnection
     {
-        IMangaIdentifier Id { get; set; }
+        IMangaIdentifier Id { get; }
         int? ChapterPartStep { get; }
-        int? EndingChapter { get; set; }
-        int? EndingChapterPart { get; set; }
-        int? EndingPage { get; set; }
-        int StartingChapter { get; set; }
-        int? StartingChapterPart { get; set; }
-        int StartingPage { get; set; }
+        int? EndingChapter { get; }
+        int? EndingChapterPart { get; }
+        int? EndingPage { get; }
+        int StartingChapter { get; }
+        int? StartingChapterPart { get; }
+        int StartingPage { get; }
     }
 }

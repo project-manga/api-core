@@ -1,5 +1,6 @@
 ﻿namespace api_core_console_client
 {
+    using ApiCoreDomain;
     using ApiCoreDomain.GoodManga;
     using System;
     using System.IO;
@@ -13,7 +14,7 @@
             var ch = int.Parse(ReadLine());
             var page = int.Parse(ReadLine());
 
-            var cnn = new GoodMangaConnection
+            var cnn = new MangaConnection
             {
                 Id = new GoodMangaIdentifier(sid),
                 StartingChapter = ch,

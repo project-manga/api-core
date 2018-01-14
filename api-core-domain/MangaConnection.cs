@@ -1,6 +1,6 @@
-﻿namespace ApiCoreDomain.GoodManga
+﻿namespace ApiCoreDomain
 {
-    public class GoodMangaConnection : IMangaConnection
+    public class MangaConnection : IMangaConnection
     {
         public IMangaIdentifier Id { get; set; }
         public int StartingChapter { get; set; }
