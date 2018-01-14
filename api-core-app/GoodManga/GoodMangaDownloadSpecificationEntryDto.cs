@@ -1,4 +1,4 @@
-﻿namespace ApiCoreApp
+﻿namespace ApiCoreApp.GoodManga
 {
     /// <summary>
     /// Represents GoodManga download specification entry dto.

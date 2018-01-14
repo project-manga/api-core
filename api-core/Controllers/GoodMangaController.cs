@@ -1,9 +1,9 @@
-﻿using ApiCoreApp;
-using Microsoft.AspNetCore.Mvc;
-using System;
-
-namespace ApiCore.Controllers
+﻿namespace ApiCore.Controllers
 {
+    using ApiCoreApp.GoodManga;
+    using Microsoft.AspNetCore.Mvc;
+    using System;
+
     [Produces("application/json")]
     [Route("api/good-manga")]
     public class GoodMangaController : Controller

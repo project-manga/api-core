@@ -1,8 +1,8 @@
-﻿using ApiCoreApp;
-using NUnit.Framework;
-
-namespace ApiCoreAppTest.UT
+﻿namespace ApiCoreAppTest.UT
 {
+    using ApiCoreApp.GoodManga;
+    using NUnit.Framework;
+
     [TestFixture]
     public class GoodMangaServiceTest
     {
