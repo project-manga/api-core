@@ -20,19 +20,19 @@
         #endregion
 
         #region Public
-        public string Page(string sid, int chapter, int? part, int page)
+        public string Page(IMangaIdentifier identifier, int chapter, int? part, int page)
         {
             try
             {
-                var address = mUriFormatter.Address(sid, chapter, part, page);
-                var filename = mEnvironment.FileNameFor(sid, chapter, part, page);
+                var address = mUriFormatter.Address(identifier, chapter, part, page);
+                var filename = mEnvironment.FileNameFor(identifier, chapter, part, page);
                 mWebClient.DownloadFile(address, filename);
 
                 return filename;
             }
             catch (Exception ex)
             {
-                string errorMessage = GetPageDownloadErrorMessage(sid, chapter, part, page);
+                string errorMessage = GetPageDownloadErrorMessage(identifier.ForUri(), chapter, part, page);
                 throw new ClientException(errorMessage, ex);
             }
         } 

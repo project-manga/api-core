@@ -35,7 +35,7 @@
                 mContext.NextPage();
 
                 mClient.Page(
-                    mContext.Sid,
+                    new GoodMangaIdentifier(mContext.Sid),
                     mContext.CurrentChapter,
                     mContext.CurrentChapterPart,
                     mContext.CurrentPage);

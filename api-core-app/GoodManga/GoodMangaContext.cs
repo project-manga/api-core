@@ -2,7 +2,7 @@
 {
     using System;
 
-    public partial class GoodMangaContext
+    public class GoodMangaContext
     {
         /// <summary>
         /// Constructs GoodMangaContext
