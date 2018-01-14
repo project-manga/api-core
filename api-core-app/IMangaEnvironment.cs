@@ -1,9 +1,9 @@
-﻿namespace ApiCoreApp.GoodManga
+﻿namespace ApiCoreApp
 {
     /// <summary>
     /// To be implemented from Environment classes.
     /// </summary>
-    public interface IGoodMangaEnvironment
+    public interface IMangaEnvironment
     {
         /// <summary>
         /// Gets the full path for the page.

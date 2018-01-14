@@ -1,9 +1,9 @@
-﻿namespace ApiCoreApp.GoodManga
+﻿namespace ApiCoreApp
 {
     using System;
     using System.IO;
 
-    public class GoodMangaEnvironment : IGoodMangaEnvironment
+    public class MangaEnvironment : IMangaEnvironment
     {
         public string FileNameFor(IMangaIdentifier identifier, int chapter, int? part, int page)
         {

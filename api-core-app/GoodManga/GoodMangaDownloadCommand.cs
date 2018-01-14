@@ -23,7 +23,7 @@
 
             return new GoodMangaReader(context,
                 new GoodMangaClient(
-                    new GoodMangaEnvironment(),
+                    new MangaEnvironment(),
                     new GoodMangaUriFormatter()
                 )
             );
