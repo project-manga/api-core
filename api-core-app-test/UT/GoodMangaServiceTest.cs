@@ -8,16 +8,19 @@ namespace ApiCoreAppTest.UT
     {
         private GoodMangaService sut;
 
+        [SetUp]
         public void SetUp()
         {
             sut = new GoodMangaService();
         }
 
+        [TearDown]
         public void TearDown()
         {
             sut = null;
         }
-
+        
+        [Test]
         public void Should_write_download_specification_entry_returning_its_id()
         {
             var expected = 1L;

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api-core", "api-core\api-core.csproj", "{5CBA21B4-52B2-4728-BAFC-9C695E035321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-core-app", "api-core-app\api-core-app.csproj", "{5965D8EB-CAA3-4499-9F58-ED2EEE06B21C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api-core-app", "api-core-app\api-core-app.csproj", "{5965D8EB-CAA3-4499-9F58-ED2EEE06B21C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-core-app-test", "api-core-app-test\api-core-app-test.csproj", "{F72A9BC2-AD79-4E26-825F-C10FE3A83D21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api-core-app-test", "api-core-app-test\api-core-app-test.csproj", "{F72A9BC2-AD79-4E26-825F-C10FE3A83D21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
