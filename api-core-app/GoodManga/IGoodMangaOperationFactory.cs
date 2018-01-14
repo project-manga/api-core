@@ -1,4 +1,6 @@
-﻿namespace ApiCoreApp.GoodManga
+﻿using ApiCoreDomain;
+
+namespace ApiCoreApp.GoodManga
 {
     public interface IGoodMangaOperationFactory
     {

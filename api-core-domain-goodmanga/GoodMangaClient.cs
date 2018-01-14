@@ -6,7 +6,7 @@
     /// <summary>
     /// Client to Good Manga site.
     /// </summary>
-    public class GoodMangaClient
+    public class GoodMangaClient : IMangaClient
     {
         #region Constructors
         public GoodMangaClient(
