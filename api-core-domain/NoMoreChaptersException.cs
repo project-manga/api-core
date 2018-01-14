@@ -9,8 +9,5 @@
     [Serializable]
     public class NoMoreChaptersException : Exception
     {
-        public NoMoreChaptersException()
-        {
-        }
     }
 }

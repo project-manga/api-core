@@ -20,28 +20,28 @@
         #endregion
 
         #region Public
-        public string Page(IMangaIdentifier identifier, int chapter, int? part, int page)
+        public string Page(IMangaIdentifier identifier, int chapter, int? part, int pageNumber)
         {
             try
             {
-                var address = mUriFormatter.Address(identifier, chapter, part, page);
-                var filename = mEnvironment.FileNameFor(identifier, chapter, part, page);
+                var address = mUriFormatter.Address(identifier, chapter, part, pageNumber);
+                var filename = mEnvironment.FileNameFor(identifier, chapter, part, pageNumber);
                 mWebClient.DownloadFile(address, filename);
 
                 return filename;
             }
             catch (Exception ex)
             {
-                string errorMessage = GetPageDownloadErrorMessage(identifier.ForUri(), chapter, part, page);
+                string errorMessage = GetPageDownloadErrorMessage(identifier.ForUri(), chapter, part, pageNumber);
                 throw new ClientException(errorMessage, ex);
             }
         } 
         #endregion
 
         #region Private
-        private WebClient mWebClient;
-        private IMangaEnvironment mEnvironment;
-        private IUriFormatter mUriFormatter;
+        private readonly WebClient mWebClient;
+        private readonly IMangaEnvironment mEnvironment;
+        private readonly IUriFormatter mUriFormatter;
 
         private static string GetPageDownloadErrorMessage(string sid, int chapter, int? part, int page)
         {

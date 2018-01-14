@@ -9,8 +9,5 @@
     [Serializable]
     public class NoMorePagesException : Exception
     {
-        public NoMorePagesException()
-        {
-        }
     }
 }

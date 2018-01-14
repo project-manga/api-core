@@ -99,10 +99,10 @@
             mPagesErrors++;
         }
 
-        private int mChaptersErrors = 0;
-        private int mPagesErrors = 0;
-        private int mAllowedChaptersErrors = 3;
-        private int mAllowedPagesErrors = 3;
+        private int mChaptersErrors;
+        private int mPagesErrors;
+        private readonly int mAllowedChaptersErrors = 3;
+        private readonly int mAllowedPagesErrors = 3;
     }
 
 }
