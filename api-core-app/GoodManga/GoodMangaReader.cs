@@ -2,13 +2,15 @@
 {
     using System;
 
-    public class GoodMangaReader
+    public class GoodMangaReader : IMangaReader
     {
         public GoodMangaReader(GoodMangaContext context, GoodMangaClient client)
         {
             mContext = context ?? throw new ArgumentNullException(nameof(context));
             mClient = client ?? throw new ArgumentNullException(nameof(client));
         }
+
+        public IMangaIdentifier Id => new GoodMangaIdentifier(mContext.Sid);
 
         public int Chapter => mContext.CurrentChapter;
 
