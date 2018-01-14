@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\api-core-app\api-core-app.csproj" />
+    <ProjectReference Include="..\api-core-domain-goodmanga\api-core-domain-goodmanga.csproj" />
+    <ProjectReference Include="..\api-core-domain\api-core-domain.csproj" />
   </ItemGroup>
 
 </Project>

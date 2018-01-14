@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{0988
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-core-console-client", "api-core-console-client\api-core-console-client.csproj", "{99185E50-405A-450A-A35A-46EBE6DEC72B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-core-domain", "api-core-domain\api-core-domain.csproj", "{D141DF9E-800D-433D-8D45-0B5C3DC0DDD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-core-domain-goodmanga", "api-core-domain-goodmanga\api-core-domain-goodmanga.csproj", "{1E73DFDC-20EC-43C6-83B8-82FCE350D24F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{99185E50-405A-450A-A35A-46EBE6DEC72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99185E50-405A-450A-A35A-46EBE6DEC72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99185E50-405A-450A-A35A-46EBE6DEC72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D141DF9E-800D-433D-8D45-0B5C3DC0DDD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D141DF9E-800D-433D-8D45-0B5C3DC0DDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D141DF9E-800D-433D-8D45-0B5C3DC0DDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D141DF9E-800D-433D-8D45-0B5C3DC0DDD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E73DFDC-20EC-43C6-83B8-82FCE350D24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E73DFDC-20EC-43C6-83B8-82FCE350D24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E73DFDC-20EC-43C6-83B8-82FCE350D24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E73DFDC-20EC-43C6-83B8-82FCE350D24F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,7 @@
     /// are available for a manga to download.
     /// </summary>
     [Serializable]
-    internal class NoMoreChaptersException : Exception
+    public class NoMoreChaptersException : Exception
     {
         public NoMoreChaptersException()
         {
