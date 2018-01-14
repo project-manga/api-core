@@ -1,6 +1,6 @@
 ﻿namespace api_core_console_client
 {
-    using ApiCoreApp.GoodManga;
+    using ApiCoreDomain.GoodManga;
     using System;
     using System.IO;
     using static System.Console;

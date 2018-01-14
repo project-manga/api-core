@@ -1,4 +1,4 @@
-﻿namespace ApiCoreApp
+﻿namespace ApiCoreDomain
 {
     /// <summary>
     /// To be implemented from Environment classes.

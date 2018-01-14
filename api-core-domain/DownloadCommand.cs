@@ -1,4 +1,4 @@
-﻿namespace ApiCoreApp
+﻿namespace ApiCoreDomain
 {
     /// <summary>
     /// Represents base class for manga download related commands.

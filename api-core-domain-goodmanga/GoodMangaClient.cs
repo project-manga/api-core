@@ -1,4 +1,4 @@
-﻿namespace ApiCoreApp.GoodManga
+﻿namespace ApiCoreDomain.GoodManga
 {
     using System;
     using System.Net;

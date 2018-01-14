@@ -1,4 +1,4 @@
-﻿namespace ApiCoreApp
+﻿namespace ApiCoreDomain
 {
     using System;
     using System.IO;

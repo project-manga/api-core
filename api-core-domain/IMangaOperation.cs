@@ -1,4 +1,4 @@
-﻿namespace ApiCoreApp
+﻿namespace ApiCoreDomain
 {
     public interface IMangaOperation
     {

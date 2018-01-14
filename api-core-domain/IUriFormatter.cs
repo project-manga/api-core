@@ -1,4 +1,4 @@
-﻿namespace ApiCoreApp
+﻿namespace ApiCoreDomain
 {
     /// <summary>
     /// Implemented by those classes whose compose 
