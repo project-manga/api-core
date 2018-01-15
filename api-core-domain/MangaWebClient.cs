@@ -9,6 +9,11 @@
     public class MangaWebClient : IMangaClient
     {
         #region Constructors
+        /// <summary>
+        /// Constructs the client.
+        /// </summary>
+        /// <param name="environment">Manga environment</param>
+        /// <param name="uriFormatter">Uri formatter, composes page url</param>
         public MangaWebClient(
             IMangaEnvironment environment,
             IUriFormatter uriFormatter)
@@ -20,19 +25,19 @@
         #endregion
 
         #region Public
-        public string Page(IMangaIdentifier identifier, int chapter, int? part, int pageNumber)
+        public string DownloadPage(IMangaIdentifier identifier, int chapter, int? part, int page)
         {
             try
             {
-                var address = mUriFormatter.Address(identifier, chapter, part, pageNumber);
-                var filename = mEnvironment.FileNameFor(identifier, chapter, part, pageNumber);
+                var address = mUriFormatter.Address(identifier, chapter, part, page);
+                var filename = mEnvironment.FileNameFor(identifier, chapter, part, page);
                 mWebClient.DownloadFile(address, filename);
 
                 return filename;
             }
             catch (Exception ex)
             {
-                string errorMessage = GetPageDownloadErrorMessage(identifier.ForUri(), chapter, part, pageNumber);
+                string errorMessage = GetPageDownloadErrorMessage(identifier.ForUri(), chapter, part, page);
                 throw new ClientException(errorMessage, ex);
             }
         } 

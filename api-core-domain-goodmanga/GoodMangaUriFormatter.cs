@@ -1,5 +1,8 @@
 ﻿namespace ApiCoreDomain.GoodManga
 {
+    /// <summary>
+    /// GoodManga uri formatter
+    /// </summary>
     public class GoodMangaUriFormatter : IUriFormatter
     {
         public string Address(IMangaIdentifier identifier, int chapter, int? part, int page)

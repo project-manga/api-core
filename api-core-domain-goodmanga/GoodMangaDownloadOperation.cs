@@ -1,7 +1,7 @@
 ﻿namespace ApiCoreDomain.GoodManga
 {
     using System;
-
+    
     public class GoodMangaDownloadOperation : IMangaOperation
     {
         private readonly IMangaConnection mConnection;

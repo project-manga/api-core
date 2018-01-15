@@ -2,14 +2,25 @@
 {
     using System;
 
+    /// <summary>
+    /// GoodManga reader implementation.
+    /// </summary>
     public class GoodMangaReader : IMangaReader
     {
+        #region Constructors
+        /// <summary>
+        /// Constructs the reader.
+        /// </summary>
+        /// <param name="context">The context</param>
+        /// <param name="client">The client</param>
         public GoodMangaReader(GoodMangaContext context, MangaWebClient client)
         {
             mContext = context ?? throw new ArgumentNullException(nameof(context));
             mClient = client ?? throw new ArgumentNullException(nameof(client));
-        }
+        } 
+        #endregion
 
+        #region Public
         public IMangaIdentifier Id => mContext.Identifier;
 
         public int Chapter => mContext.CurrentChapter;
@@ -29,6 +40,11 @@
                 return false;
             }
         }
+        #endregion
+
+        #region Private
+        private readonly GoodMangaContext mContext;
+        private readonly MangaWebClient mClient;
 
         private bool ReadPage()
         {
@@ -36,7 +52,7 @@
             {
                 mContext.NextPage();
 
-                mClient.Page(
+                mClient.DownloadPage(
                     mContext.Identifier,
                     mContext.CurrentChapter,
                     mContext.CurrentChapterPart,
@@ -55,9 +71,7 @@
                 mContext.FailChapter();
                 return true;
             }
-        }
-
-        private readonly GoodMangaContext mContext;
-        private readonly MangaWebClient mClient;
+        } 
+        #endregion
     }
 }
