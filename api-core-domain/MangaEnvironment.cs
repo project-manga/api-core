@@ -5,12 +5,12 @@
 
     public class MangaEnvironment : IMangaEnvironment
     {
-        public string FileNameFor(IMangaIdentifier identifier, int chapter, int? part, int page)
+        public string FileNameFor(IMangaPageIdentifier identifier)
         {
             return Path.Combine(
                 Environment.CurrentDirectory,
                 "Downloads",
-                $"{identifier.ForUri()}_{chapter:0000}_{part:00}_{page:0000}.jpg");
+                $"{identifier.MangaId.ForUri()}_{identifier.Chapter:0000}_{identifier.Part:00}_{identifier.Page:0000}.jpg");
         }
     }
 }

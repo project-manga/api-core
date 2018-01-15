@@ -53,10 +53,13 @@
                 mContext.NextPage();
 
                 mClient.DownloadPage(
-                    mContext.Identifier,
-                    mContext.CurrentChapter,
-                    mContext.CurrentChapterPart,
-                    mContext.CurrentPage);
+                    new MangaPageIdentifier(
+                        mContext.Identifier,
+                        mContext.CurrentChapter,
+                        mContext.CurrentChapterPart,
+                        mContext.CurrentPage
+                    )
+                );
 
                 mContext.SuccessPage();
                 return true;

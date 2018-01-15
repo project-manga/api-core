@@ -25,22 +25,18 @@
         #endregion
 
         #region Public
-        public string DownloadPage(IMangaIdentifier identifier, int chapter, int? part, int page)
+        public string DownloadPage(IMangaPageIdentifier identifier)
         {
             try
             {
-                var address = mUriFormatter.Address(identifier, chapter, part, page);
-                var filename = mEnvironment.FileNameFor(identifier, chapter, part, page);
-                mWebClient.DownloadFile(address, filename);
-
-                return filename;
+                return InternalDownloadPage(identifier);
             }
             catch (Exception ex)
             {
-                string errorMessage = GetPageDownloadErrorMessage(identifier.ForUri(), chapter, part, page);
+                string errorMessage = GetPageDownloadErrorMessage(identifier);
                 throw new ClientException(errorMessage, ex);
             }
-        } 
+        }
         #endregion
 
         #region Private
@@ -48,12 +44,21 @@
         private readonly IMangaEnvironment mEnvironment;
         private readonly IUriFormatter mUriFormatter;
 
-        private static string GetPageDownloadErrorMessage(string sid, int chapter, int? part, int page)
+        private static string GetPageDownloadErrorMessage(IMangaPageIdentifier identifier)
         {
-            var actualPart = part ?? -1;
-            var errorMessage = $"An error occurred while trying to download: {sid}, {chapter}, {actualPart}, {page}";
+            var actualPart = identifier.Part ?? -1;
+            var errorMessage = $"An error occurred while trying to download: {identifier.MangaId.ForUri()}, {identifier.Chapter}, {actualPart}, {identifier.Part}";
             return errorMessage;
-        } 
+        }
+
+        private string InternalDownloadPage(IMangaPageIdentifier identifier)
+        {
+            var address = mUriFormatter.Address(identifier);
+            var filename = mEnvironment.FileNameFor(identifier);
+            mWebClient.DownloadFile(address, filename);
+
+            return filename;
+        }
         #endregion
     }
 }

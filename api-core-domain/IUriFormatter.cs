@@ -9,11 +9,8 @@
         /// <summary>
         /// Formats page components into specific uri.
         /// </summary>
-        /// <param name="identifier">Manga Id</param>
-        /// <param name="chapter">Chapter number</param>
-        /// <param name="part">Chapter part</param>
-        /// <param name="page">Chapter page</param>
+        /// <param name="identifier">Manga page id</param>
         /// <returns></returns>
-        string Address(IMangaIdentifier identifier, int chapter, int? part, int page);
+        string Address(IMangaPageIdentifier identifier);
     }
 }
