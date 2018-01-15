@@ -10,7 +10,7 @@
             return Path.Combine(
                 Environment.CurrentDirectory,
                 "Downloads",
-                $"{identifier.MangaId.ForUri()}_{identifier.Chapter:0000}_{identifier.Part:00}_{identifier.Page:0000}.jpg");
+                $"{identifier.ChapterId.MangaId.ForUri()}_{identifier.ChapterId.Chapter:0000}_{identifier.ChapterId.Part:00}_{identifier.Page:0000}.jpg");
         }
     }
 }

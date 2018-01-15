@@ -1,26 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ApiCoreDomain
+﻿namespace ApiCoreDomain
 {
-    public class MangaPageIdentifier : IMangaPageIdentifier, IEquatable<MangaPageIdentifier>
+    using System.Collections.Generic;
+
+    public class MangaPageIdentifier : IMangaPageIdentifier
     {
         #region Constructors
-        public MangaPageIdentifier(IMangaIdentifier mangaId, int chapter, int? part, int page)
+        public MangaPageIdentifier(IMangaChapterIdentifier chapterId, int page)
         {
-            MangaId = mangaId;
-            Chapter = chapter;
-            Part = part;
+            ChapterId = chapterId;
             Page = page;
         }
         #endregion
 
         #region Public
-        public IMangaIdentifier MangaId { get; }
-
-        public int Chapter { get; }
-
-        public int? Part { get; }
+        public IMangaChapterIdentifier ChapterId { get; }
 
         public int Page { get; }
 
@@ -29,24 +22,20 @@ namespace ApiCoreDomain
             return Equals(obj as MangaPageIdentifier);
         }
 
-        public bool Equals(MangaPageIdentifier other)
+        public bool Equals(IMangaPageIdentifier other)
         {
-            return other != null &&
-                EqualityComparer<IMangaIdentifier>.Default.Equals(MangaId, other.MangaId) &&
-                Chapter == other.Chapter &&
-                EqualityComparer<int?>.Default.Equals(Part, other.Part) &&
-                Page == other.Page;
+            return other != null
+                && EqualityComparer<IMangaChapterIdentifier>.Default.Equals(ChapterId, other.ChapterId)
+                && Page == other.Page;
         }
 
         public override int GetHashCode()
         {
             var hashCode = -668726078;
-            hashCode = hashCode * -1521134295 + EqualityComparer<IMangaIdentifier>.Default.GetHashCode(MangaId);
-            hashCode = hashCode * -1521134295 + Chapter.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<int?>.Default.GetHashCode(Part);
+            hashCode = hashCode * -1521134295 + EqualityComparer<IMangaChapterIdentifier>.Default.GetHashCode(ChapterId);
             hashCode = hashCode * -1521134295 + Page.GetHashCode();
             return hashCode;
-        } 
+        }
         #endregion
     }
 }

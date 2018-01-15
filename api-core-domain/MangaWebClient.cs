@@ -46,8 +46,8 @@
 
         private static string GetPageDownloadErrorMessage(IMangaPageIdentifier identifier)
         {
-            var actualPart = identifier.Part ?? -1;
-            var errorMessage = $"An error occurred while trying to download: {identifier.MangaId.ForUri()}, {identifier.Chapter}, {actualPart}, {identifier.Part}";
+            var actualPart = identifier.ChapterId.Part ?? -1;
+            var errorMessage = $"An error occurred while trying to download: {identifier.ChapterId.MangaId.ForUri()}, {identifier.ChapterId.Chapter}, {actualPart}, {identifier.ChapterId.Part}";
             return errorMessage;
         }
 

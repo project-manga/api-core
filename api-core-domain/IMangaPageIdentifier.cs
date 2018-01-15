@@ -1,24 +1,16 @@
 ﻿namespace ApiCoreDomain
 {
+    using System;
+
     /// <summary>
     /// Represents a manga page identifier.
     /// </summary>
-    public interface IMangaPageIdentifier
+    public interface IMangaPageIdentifier : IEquatable<IMangaPageIdentifier>
     {
         /// <summary>
         /// Gets manga source of the page.
         /// </summary>
-        IMangaIdentifier MangaId { get; }
-        
-        /// <summary>
-        /// Gets chapter source of the page.
-        /// </summary>
-        int Chapter { get; }
-
-        /// <summary>
-        /// Gets chapter part source of the page.
-        /// </summary>
-        int? Part { get; }
+        IMangaChapterIdentifier ChapterId { get; }
 
         /// <summary>
         /// Gets page number.

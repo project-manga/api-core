@@ -54,9 +54,11 @@
 
                 mClient.DownloadPage(
                     new MangaPageIdentifier(
-                        mContext.Identifier,
-                        mContext.CurrentChapter,
-                        mContext.CurrentChapterPart,
+                        new MangaChapterIdentifier(
+                            mContext.Identifier,
+                            mContext.CurrentChapter,
+                            mContext.CurrentChapterPart
+                        ),
                         mContext.CurrentPage
                     )
                 );
