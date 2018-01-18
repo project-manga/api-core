@@ -6,6 +6,5 @@ jobs:
     steps:
       - checkout
       - run: dotnet build      
-      - run: dotnet test /api-core-app-test/api-core-app-test.csproj
       
 
